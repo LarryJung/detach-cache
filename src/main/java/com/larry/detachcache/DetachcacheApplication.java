@@ -28,16 +28,4 @@ public class DetachcacheApplication {
         SpringApplication.run(DetachcacheApplication.class, args);
     }
 
-//    @Bean
-//    public SimpleCacheManager cacheManager() {
-//        SimpleCacheManager cacheManager = new SimpleCacheManager();
-//        CaffeineCache cache = new CaffeineCache("tour",
-//                Caffeine.newBuilder()
-//                        .expireAfterWrite(10, TimeUnit.SECONDS)
-//                        .maximumSize(100)
-//                        .build());
-//        cacheManager.setCaches(List.of(cache));
-//        return cacheManager;
-//    }
-
 }

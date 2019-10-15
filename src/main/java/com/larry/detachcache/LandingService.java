@@ -15,6 +15,7 @@ public class LandingService {
 
     private final TourService tourService;
 
+    // options를 fetch 하지 않는다.
     @Transactional(readOnly = true)
     public TourDto findByIdWithoutOption(Long id) {
         Tour tour = tourService.find(id);
@@ -24,6 +25,7 @@ public class LandingService {
                 .build();
     }
 
+    // options를 fetch 한다. 예외 발생!
     @Transactional(readOnly = true)
     public TourDto findByIdWithOption(Long id) {
         Tour tour = tourService.find(id);
